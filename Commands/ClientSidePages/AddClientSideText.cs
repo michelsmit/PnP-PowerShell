@@ -24,9 +24,9 @@ namespace SharePointPnP.PowerShell.Commands.ClientSidePages
         [Parameter(Mandatory = true, ValueFromPipeline = true, Position = 0, HelpMessage = "The name of the page.", ParameterSetName = ParameterSet_POSITIONED)]
         public ClientSidePagePipeBind Page;
 
-        [Parameter(Mandatory = true, HelpMessage = "Specifies the text to display in the text area.", ParameterSetName = ParameterSet_DEFAULT)]
-        [Parameter(Mandatory = true, HelpMessage = "Specifies the text to display in the text area.", ParameterSetName = ParameterSet_POSITIONED)]
-        public string Text;
+        [Parameter(Mandatory = false, HelpMessage = "Specifies the text to display in the text area.", ParameterSetName = ParameterSet_DEFAULT)]
+        [Parameter(Mandatory = false, HelpMessage = "Specifies the text to display in the text area.", ParameterSetName = ParameterSet_POSITIONED)]
+        public string Text = String.Empty;
 
         [Parameter(Mandatory = false, HelpMessage = "Sets the order of the text control. (Default = 1)", ParameterSetName = ParameterSet_DEFAULT)]
         [Parameter(Mandatory = false, HelpMessage = "Sets the order of the text control. (Default = 1)", ParameterSetName = ParameterSet_POSITIONED)]
